@@ -1,17 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import useDarkMode from "../hooks/useDarkMode";
-
+import styles from "./Nav.module.css";
 
 const Nav = () => {
-    const [darkMode, setDarkMode] = useDarkMode();
-
-    const handleOnChange = ({ target: { checked } }) => {
-        setDarkMode(checked);
-    };
 
     return (
-        <ul>
+        <ul className={styles.nav}>
             <li>
                 <Link to="/">Home</Link>
             </li>
@@ -20,9 +14,6 @@ const Nav = () => {
             </li>
             <li>
                 <Link to="/about">About</Link>
-            </li>
-            <li>
-                Dark Mode: <input type="checkbox" name="darkmode" onClick={handleOnChange}/>
             </li>
         </ul>
     );

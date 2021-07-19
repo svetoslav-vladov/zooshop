@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import getProducts from "../network/getController";
-import Product from "../components/Product";
+import Categories from "../components/Categories/Categories";
+import CategoriesStyles from "../components/Categories/Categories.module.css"
 
 const Products = () => {
     const [data, setData] = useState(null);
@@ -24,11 +25,16 @@ const Products = () => {
     return (
         <div>
             <button onClick={()=>{setModalOpen(true)}}>Open</button>
+            <ul className={CategoriesStyles.category}>
             {
+                
                 data.map((prod) => (
-                    <Product key={`prod-${prod.id}`} {...prod} />
+                    
+                    <Categories key={`prod-${prod.id}`} {...prod} />
+
                 ))
             }
+            </ul>
         </div>
     );
 };

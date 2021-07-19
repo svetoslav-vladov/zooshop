@@ -11,7 +11,7 @@ function Routes() {
     <Switch>
         <Route path="/" component={Home} exact={true} />
         <Route path="/products" component={Products} exact={true}/>
-        <Route path="/products/:category/:brand?" component={ProductCategory} exact={true}/>
+        <Route path="/products/:category/:id?" component={ProductCategory} exact={true}/>
         <Route path="/about" component={About} />
         <Route path="*" component={NotFound} />
     </Switch>

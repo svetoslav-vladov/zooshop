@@ -5,8 +5,10 @@ const categoryPrefix = "/products";
 
 // todo brand
 
-const getController = () => {
-   return fetch(`${serverUrl}${categoryPrefix}`)
+// todo id
+
+const getController = (id = '') => {
+   return fetch(`${serverUrl}${categoryPrefix}${id}`)
         .then((res) => {
             return res.json();
     });

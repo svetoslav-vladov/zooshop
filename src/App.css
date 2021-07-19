@@ -1,7 +1,13 @@
 .App{
   display: block;
   margin: 0 auto;
-  width: 900px;
+  width: 100%;
+  max-width: 900px;
+  border: 1px solid black;
+  padding: 10px;
+  box-sizing: border-box;
+  height: 100vh;
+  background-color: #efefef;
 }
 
 .dark-mode {
@@ -11,4 +17,8 @@
 
 .dark-mode a{
   color: yellow;
+}
+
+a {
+  color:#000;
 }
