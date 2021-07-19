@@ -1,0 +1,14 @@
+.App{
+  display: block;
+  margin: 0 auto;
+  width: 900px;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+.dark-mode a{
+  color: yellow;
+}
